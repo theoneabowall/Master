@@ -73,13 +73,13 @@ def channel_delete():
             idss.clear()  
     
 scheduler = BackgroundScheduler()
-scheduler.add_job(clean_data, 'interval' , seconds=15)
+scheduler.add_job(clean_data, 'interval' , seconds=30)
 
 
 scheduler.start()   
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(channel_delete, 'interval' , minutes=5)
+scheduler.add_job(channel_delete, 'interval' , minutes=30)
 
 
 scheduler.start()  
