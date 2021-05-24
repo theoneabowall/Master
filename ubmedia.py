@@ -5,7 +5,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 #---------------------------------+ Data
 api_id=5282591
 api_hash='d416fe4e323d0e2b4616fef68a8ddd63'
-string = "AQCuTNr7BMHjwi7ZHLsl-zcSsLOhzbl0Onn_Tw-88oU-iGoEPllbOxlU0wEnlwAoFosK6ROAxqtUsZYbytf-M6z2aLRmgso48t6IHnLIOthU-oZHQjNtEQ1QA38TvY7c_kTEUBueYdWZ8LzcshYdQ5C97t2IdvLMQROBxzuufm6-ngVVdQhKHaFkagy7ljJWjhAitXy58jgMavVR0b4bOF7j0P4sPQtr2OjBTOtUrnn4WGmTDjjTWKamSQMg-WW_1547LXac_145Ss8xXM7EKfXtFKnP847kYWNzLEQwCW9OiyvVlhFEYjvXeTtvA5RJpjCgYBkeK2oYZG0PxJ9DiQx3QSNu3gA"
+string = 'AQBWRO4lZExD7GMcSgo1bIy0X_GpJIV2U9hnpAIuu_hi79RBQd4LCZOEh9Cdq4Rma4O_2kLQ0cP7VB4qvMOOOYl8QkRCDuE-l1YXax1H6bm-aPb0hOHeBfUzR-oYcJFl4ge8sy58J1IF12Q1LZng3TthkhfyTsoY6YIp5S9Felg3scEqyevI7P_YtFNsquUiMSOjMKghMzgNwk6vZzwfIm3fiIrc05S7Z0vxMh7gggtjloIBHpv-k6WF4Y85pRUOK2zukcMDabHV3NYWHeLlFYFAAVfX6kofKQLuhykvbKKwXElIGRkcXoeEfIDC4DDqxhJgNkuCVb_5l7pb6kxw1sQSNu3gA'
 #------------------------------------end
 idss = []
 channel = -1001390839405
