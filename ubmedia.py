@@ -10,8 +10,8 @@ from pyrogram.types.messages_and_media import message
 api_id = int(getenv("API_ID"))
 api_hash = getenv("API_HASH")
 string = getenv("SESSION_STRING")
-group = int(getenv("GROUP_ID"))
-channel = int(getenv("GROUP_ID"))
+group = getenv("GROUP_ID")
+channel = getenv("GROUP_ID")
 g_time = int(getenv("GROUP_DELETE_TIME"))
 c_time = int(getenv("CHANNEL_DELETE_TIME"))
 
