@@ -33,7 +33,7 @@ def clean_data():
         msg_id = ids.message_id
         idss.append(msg_id)
         ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
-        ub.delete_messages(chat_id=message.chat.id, message_ids=msg_id)
+        ub.delete_messages(chat_id=group, message_ids=msg_id)
     else:
         if len(idss) == 0:
             print("no photos to delete")
@@ -47,7 +47,7 @@ def clean_data():
         msg_id = ids.message_id
         idss.append(msg_id)
         ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
-        ub.delete_messages(chat_id=message.chat.id, message_ids=msg_id)
+        ub.delete_messages(chat_id=group, message_ids=msg_id)
     else:
         if len(idss) == 0:
             print("no photos to delete")
