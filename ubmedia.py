@@ -10,17 +10,15 @@ from pyrogram.types.messages_and_media import message
 api_id = int(getenv("API_ID"))
 api_hash = getenv("API_HASH")
 string = getenv("SESSION_STRING")
-group = getenv("GROUP_ID")
-channel = getenv("GROUP_ID")
 g_time = int(getenv("GROUP_DELETE_TIME"))
 c_time = int(getenv("CHANNEL_DELETE_TIME"))
 
 #---------------------------------+ Data
-api_id= api_id #5282591
-api_hash= api_hash #'d416fe4e323d0e2b4616fef68a8ddd63'
-string = string #"DfgvqvqO2lMDaFk_q_zILvG2jEyGQvlJf2BPgBoPTqND8VaaETrn3GxpVdo7q4TmE-XSAEHZbSHK4f5Vfpuv5mhXRX8ZrxN4KVuANqU-jX-HrGT0a_mYOkuAxl4mWb14xEMwnJ7qgHDz21E2kQLL8nXmy4dHi-7PVrzSKpz7k0grwgPTYWx_N391yEQSNu3gA"
-group = '-' + str(group)
-channel = '-' + str(channel)
+api_id= api_id 
+api_hash= api_hash 
+string = string 
+group = -1001241414282
+channel = -1001390839405
 #------------------------------------end
 idss = []
 
