@@ -11,9 +11,9 @@ api_id = int(os.environ["API_ID"])
 api_hash = os.environ["API_HASH"]
 string = os.environ["SESSION_STRING"]
 group_ids = list(os.environ["GROUP_IDS"])
-channel = int(os.environ["SESSION_STRING"])
-g_time = int(os.environ["SESSION_STRING"])
-c_time = int(os.environ["SESSION_STRING"])
+channel = int(os.environ["CHANNEL_ID"])
+g_time = int(os.environ["GROUP_DELETE_TIME"])
+c_time = int(os.environ["CHANNEL_DELETE_TIME"])
 
 
 #---------------------------------+ Data
