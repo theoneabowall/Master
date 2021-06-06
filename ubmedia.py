@@ -9,7 +9,7 @@ from pyrogram.types.messages_and_media import message
 api_id = int(os.environ["API_ID"])
 api_hash = os.environ["API_HASH"]
 string = os.environ["SESSION_STRING"]
-group = list(int(os.environ["GROUP_IDS"]).split())
+group = list(map(int, os.environ("GROUP_IDS").split()))
 channel = int(os.environ["SESSION_STRING"])
 g_time = int(os.environ["SESSION_STRING"])
 c_time = int(os.environ["SESSION_STRING"])
