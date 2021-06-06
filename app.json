@@ -23,12 +23,6 @@
         "SESSION_STRING": {
             "description": "pyrogram string"
         },
-        "GROUP_IDS": {
-            "description": "Group id's ex: -10045368764 , -10017897453 "
-        },
-        "CHANNEL_ID": {
-            "description": "channel id ex: -10045368764"
-        },
         "GROUP_DELETE_TIME": {
             "description": "time in seconds : 1 - 60"
         },

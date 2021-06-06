@@ -32,7 +32,7 @@ def clean_data():
     for ids in ub.search_messages(chat_id=group, filter="photo_video", limit=20):
         msg_id = ids.message_id
         idss.append(msg_id)
-        ub.copy_message(chat_id=channel, from_chat_id=message.chat.id, message_id=msg_id)
+        ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
         ub.delete_messages(chat_id=message.chat.id, message_ids=msg_id)
     else:
         if len(idss) == 0:
@@ -46,7 +46,7 @@ def clean_data():
     for ids in ub.search_messages(chat_id=group, filter="document", limit=5):
         msg_id = ids.message_id
         idss.append(msg_id)
-        ub.copy_message(chat_id=channel, from_chat_id=message.chat.id, message_id=msg_id)
+        ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
         ub.delete_messages(chat_id=message.chat.id, message_ids=msg_id)
     else:
         if len(idss) == 0:
