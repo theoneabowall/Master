@@ -19,11 +19,12 @@ c_time = int(os.environ["CHANNEL_DELETE_TIME"])
 #---------------------------------+ Data
 api_id= api_id #5282591
 api_hash= api_hash #'d416fe4e323d0e2b4616fef68a8ddd63'
-string = string #"AQAxO6R-Kz17MQueNLTtEG_tYoL73k8kyhmysmR8VMwmiHkgHzSVrjiIpVVmrzx_vRtu4YOaawAcgHj1HzsLGZ1LpfFSki2Ic3luyNYsYxOCNFShVVV2gPoMGTUAEkrTUvK-3MFggnrFPMzULru8v3AtTvR-bTDfgvqvqO2lMDaFk_q_zILvG2jEyGQvlJf2BPgBoPTqND8VaaETrn3GxpVdo7q4TmE-XSAEHZbSHK4f5Vfpuv5mhXRX8ZrxN4KVuANqU-jX-HrGT0a_mYOkuAxl4mWb14xEMwnJ7qgHDz21E2kQLL8nXmy4dHi-7PVrzSKpz7k0grwgPTYWx_N391yEQSNu3gA"
+string = string #"L8nXmy4dHi-7PVrzSKpz7k0grwgPTYWx_N391yEQSNu3gA"
 #------------------------------------end
 idss = []
 for x in group_ids:
-    group = x
+    group = int(x)
+    print(group)
 
 ub = Client(string, api_id=api_id, api_hash=api_hash, sleep_threshold=60)
 
