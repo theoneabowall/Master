@@ -1,13 +1,13 @@
 from pyrogram import Client
 from pyrogram import filters
 from apscheduler.schedulers.background import BackgroundScheduler
-from apscheduler.schedulers.blocking import BlockingScheduler
-from pytz import utc
+
+
 import os
 from os import getenv
 from pyrogram.types.messages_and_media import message
 
-sched = BlockingScheduler(timezone=utc)
+
 
 #---------------------------------+ heroku
 api_id = int(getenv("API_ID"))
@@ -88,13 +88,13 @@ def channel_delete():
             print(f"almost {c} files deleted")
             idss.clear()  
     
-scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler(timezone="Asia/Kolkata")
 scheduler.add_job(clean_data, 'interval' , seconds=g_time)
 
 
 scheduler.start()   
 
-scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler(timezone="Asia/Kolkata")
 scheduler.add_job(channel_delete, 'interval' , minutes=c_time)
 
 
