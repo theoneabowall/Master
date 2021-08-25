@@ -21,7 +21,7 @@ api_id= api_id
 api_hash= api_hash 
 string = string 
 group = -1001241414282
-channel = -1001390839405
+channel = -1001179102851
 #------------------------------------end
 idss = []
 
