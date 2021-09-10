@@ -75,7 +75,7 @@ def channel_delete():
             print(f"almost {c} files deleted")
             idss.clear() 
 
-    for ids in ub.search_messages(chat_id=channel, filter="document", limit=5)
+    for ids in ub.search_messages(chat_id=channel, filter="document", limit=5):
         msg_id = ids.message_id
         idss.append(msg_id)
         ub.delete_messages(chat_id=channel, message_ids=msg_id)
