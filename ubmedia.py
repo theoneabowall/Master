@@ -1,8 +1,6 @@
-from pyrogram import Client
-from pyrogram import filters
+#Dangerprobot
+from pyrogram import Client,filters
 from apscheduler.schedulers.background import BackgroundScheduler
-
-
 import os
 from os import getenv
 from pyrogram.types.messages_and_media import message
@@ -26,17 +24,17 @@ channel = -1001580868251
 idss = []
 
 
-ub = Client(string, api_id=api_id, api_hash=api_hash, sleep_threshold=60)
+app = Client(string, api_id=api_id, api_hash=api_hash, sleep_threshold=60)
 
     
     
 def clean_data():
     print("checking media")
-    for ids in ub.search_messages(chat_id=group, filter="photo_video", limit=20):
-        msg_id = ids.message_id
+    for ids in app.search_messages(chat_id=group, filter="media", limit=20):
+        msg_id = ids.message.id
         idss.append(msg_id)
-        ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
-        ub.delete_messages(chat_id=group, message_ids=msg_id)
+        app.copy_message(chat_id=channel, from_chat_id=group, message.id=msg_id)
+        app.delete_messages(chat_id=group, message_ids=msg_id)
     else:
         if len(idss) == 0:
             print("no photos to delete")
@@ -46,26 +44,13 @@ def clean_data():
             print(f"cleared almost {c} messages")
             idss.clear() 
 
-    for ids in ub.search_messages(chat_id=group, filter="document", limit=5):
-        msg_id = ids.message_id
-        idss.append(msg_id)
-        ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
-        ub.delete_messages(chat_id=group, message_ids=msg_id)
-    else:
-        if len(idss) == 0:
-            print("no photos to delete")
-            return
-        else:
-            c = len(idss)
-            print(f"almost {c} files deleted")
-            idss.clear()     
-
+    
 def channel_delete():
     print("trying to delete channel messages")
-    for ids in ub.search_messages(chat_id=channel, filter="photo_video"):
-        msg_id = ids.message_id
+    for ids in app.search_messages(chat_id=channel, filter="media"):
+        msg_id = ids.message.id
         idss.append(msg_id)
-        ub.delete_messages(chat_id=channel, message_ids=msg_id)
+        app.delete_messages(chat_id=channel, message_ids=msg_id)
     else:
         if len(idss) == 0:
             print("no photos to delete")
@@ -75,18 +60,7 @@ def channel_delete():
             print(f"almost {c} files deleted")
             idss.clear() 
 
-    for ids in ub.search_messages(chat_id=channel, filter="document", limit=5):
-        msg_id = ids.message_id
-        idss.append(msg_id)
-        ub.delete_messages(chat_id=channel, message_ids=msg_id)
-    else:
-        if len(idss) == 0:
-            print("no files to delete")
-            return
-        else:
-            c = len(idss)
-            print(f"almost {c} files deleted")
-            idss.clear()  
+    
     
 scheduler = BackgroundScheduler(timezone="Asia/Kolkata")
 scheduler.add_job(clean_data, 'interval' , seconds=g_time)
@@ -104,4 +78,4 @@ scheduler.start()
 
 
 
-ub.run()
+app.run()
