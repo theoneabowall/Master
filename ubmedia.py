@@ -30,12 +30,12 @@ app = Client(string, api_id=api_id, api_hash=api_hash, sleep_threshold=60)
     
 def clean_data():
     print("checking media")
-    for ids in app.search_messages(chat_id=group, filter="media", limit=20):
-        msg_id = ids.message.id
+    idss = []
+    for message in app.search_messages(chat_id=group, filter="media", limit=20):
+        msg_id = message.message.id
         idss.append(msg_id)
         app.copy_message(chat_id=channel, from_chat_id=group, message.id=msg_id)
         app.delete_messages(chat_id=group, message_ids=msg_id)
-    else:
         if len(idss) == 0:
             print("no photos to delete")
             return
