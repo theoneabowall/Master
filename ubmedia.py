@@ -10,21 +10,21 @@ from pyrogram.types.messages_and_media import message
 #---------------------------------+ heroku
 api_id = int(getenv("API_ID"))
 api_hash = getenv("API_HASH")
-string = getenv("SESSION_STRING")
+string_pyrogram = getenv("SESSION_STRING")
 g_time = int(getenv("GROUP_DELETE_TIME"))
 c_time = int(getenv("CHANNEL_DELETE_TIME"))
 
 #---------------------------------+ Data
 api_id= api_id 
 api_hash= api_hash 
-string = string 
+session_string= string_pyrogram 
 group = -1001241414282
 channel = -1001580868251
 #------------------------------------end
 idss = []
 
 
-app = Client(string, api_id=api_id, api_hash=api_hash, sleep_threshold=60)
+app = Client(name="auto-delete",session_string =string_pyrogram, api_id=api_id_pyrogram, api_hash=api_hash_pyrogram, sleep_threshold=60)
 
     
     
