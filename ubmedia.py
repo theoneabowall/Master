@@ -45,7 +45,7 @@ def clean_data():
             print(f"cleared almost {c} messages")
             idss.clear() 
 except Exception as e:
-     print(e) 
+    print(e) 
 
 
 def channel_delete():
