@@ -9,8 +9,8 @@ from pyrogram.types.messages_and_media import message
 
 
 #---------------------------------+ heroku
-api_id = int(getenv("API_ID"))
-api_hash = getenv("API_HASH")
+api_id_pyrogram = int(getenv("API_ID"))
+api_hash_pyrogram = getenv("API_HASH")
 string_pyrogram = getenv("SESSION_STRING")
 g_time = int(getenv("GROUP_DELETE_TIME"))
 c_time = int(getenv("CHANNEL_DELETE_TIME"))
