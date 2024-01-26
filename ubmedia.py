@@ -62,7 +62,8 @@ def channel_delete():
             c = len(idss)
             print(f"almost {c} files deleted")
             idss.clear() 
-
+     except Exception as e:
+        print(e)
     
     
 scheduler = BackgroundScheduler(timezone="Asia/Kolkata")
