@@ -18,11 +18,11 @@ group = int(getenv("GROUP_ID"))
 channel = int(getenv("CHANNEL_ID"))
 
 #---------------------------------+ Data
-api_id= api_id 
-api_hash= api_hash 
+api_id= api_id_pyrogram 
+api_hash= api_hash_pyrogram 
 session_string= string_pyrogram 
-group = -1001241414282
-channel = -1001580868251
+group = -1002120547379
+channel = -1002025718840
 #------------------------------------end
 idss = []
 
