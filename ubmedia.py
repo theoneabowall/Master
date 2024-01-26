@@ -34,7 +34,7 @@ def clean_data():
     for message in app.search_messages(chat_id=group, filter="media", limit=20):
         msg_id = message.message.id
         idss.append(msg_id)
-        app.copy_message(chat_id=channel, from_chat_id=group, message.id=msg_id)
+        app.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
         app.delete_messages(chat_id=group, message_ids=msg_id)
     try:
         if len(idss) == 0:
