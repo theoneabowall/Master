@@ -13,6 +13,8 @@ api_hash = getenv("API_HASH")
 string_pyrogram = getenv("SESSION_STRING")
 g_time = int(getenv("GROUP_DELETE_TIME"))
 c_time = int(getenv("CHANNEL_DELETE_TIME"))
+group = int(getenv("GROUP_ID"))
+channel = int(getenv("CHANNEL_ID"))
 
 #---------------------------------+ Data
 api_id= api_id 
