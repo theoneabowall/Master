@@ -45,7 +45,8 @@ def clean_data():
             print(f"cleared almost {c} messages")
             idss.clear() 
 
-    
+except Exception as e:
+        print(e)    
 def channel_delete():
     print("trying to delete channel messages")
     for message in app.search_messages(chat_id=channel, filter="media"):
