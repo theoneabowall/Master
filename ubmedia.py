@@ -10,7 +10,8 @@ api_hash_pyrogram = getenv("API_HASH")
 string_pyrogram = getenv("SESSION_STRING")
 g_time = int(getenv("GROUP_DELETE_TIME"))
 c_time = int(getenv("CHANNEL_DELETE_TIME"))
-
+group =int(getenv("NEW_GROUP"))
+channel =int(getenv("NEW_CHANNEL"))
 
 
 #------------------------------------end
