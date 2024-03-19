@@ -26,7 +26,8 @@ app = Client(name="auto-delete",session_string =string_pyrogram, api_id=api_id_p
 def clean_data():
     print("checking media")
     idss = []
-    for message in app.search_messages(chat_id=group, filter=enums.MessagesFilter.PHOTO_VIDEO, limit=30):
+    for message in app.search_messages(chat_id=group, filter=[enums.MessagesFilter.PHOTO,
+enums.MessagesFilter.VIDEO,enums.MessagesFilter.DOCUMENT], limit=30):
         msg_id = message.id
         idss.append(msg_id)
         app.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
