@@ -30,14 +30,14 @@ def clean_data():
     msgs.extend(
         tuple(
             app.search_messages(
-                chat_id=group, filter=enums.MessagesFilter.PHOTO_VIDEO, limit=3
+                chat_id=group, filter=enums.MessagesFilter.PHOTO_VIDEO, limit=30
             )
         )
     )
     msgs.extend(
         tuple(
             app.search_messages(
-                chat_id=group, filter=enums.MessagesFilter.DOCUMENT, limit=3
+                chat_id=group, filter=enums.MessagesFilter.DOCUMENT, limit=30
             )
         )
     )
